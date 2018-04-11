@@ -1,0 +1,15 @@
+.Ingredient-box {
+  flex-shrink: 0;
+  padding : 10px;
+  margin: 10px;
+  border-style: solid;
+}
+
+.Ingredient-list {
+  word-wrap: wrap;
+  text-align: left;
+}
+
+.Ingredient-header {
+  margin: 1em;
+}

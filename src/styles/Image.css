@@ -1,0 +1,26 @@
+.Image-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.Image-block {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	border-style: solid;
+	margin: 10px;
+}
+
+.ImageHeader {
+	padding-left: 10px;
+}
+
+.imageDescription {
+	margin:0;
+}
+
+.Image {
+	flex-basis: 200px;
+}
