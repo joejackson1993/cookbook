@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
 
 import '../styles/Header.css';
-import donut from "../images/donut.jpg";
+import donut from "../images/donut2.jpg";
 
 
 class Header extends Component {
