@@ -19,7 +19,6 @@ class ImageContainer extends Component {
 	);
 
 	return (
-
 		<div className="Image-container">
 		{imageBlocks}
 		</div>

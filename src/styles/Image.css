@@ -1,14 +1,14 @@
 .Image-container {
+	display: flex;
 	flex-shrink: .4;
 	flex-basis: 40%;
-	display: flex;
-	flex-wrap: wrap;
+
+	flex-flow: column wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
 }
 
 .Image-block {
-	flex-basis: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
