@@ -11,7 +11,7 @@ class IngredientList extends Component {
 
 	render (){
 
-	const data = this.state.data;
+		const data = this.state.data;
   	const listItems = data.map((data) =>
     	<li key={data.ingredient.toString()}>
     	 	{data.ammount + " " + data.measurement + " " + data.ingredient}

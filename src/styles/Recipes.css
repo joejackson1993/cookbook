@@ -1,0 +1,22 @@
+.Recipies-main {
+  box-sizing: border-box;
+}
+
+.Recipie-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Recipe-box {
+  width: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: 50%;
+}
+.Recipe-image {
+  max-width: 100%;
+  height: auto;
+}
+.Recipe-link {
+
+}

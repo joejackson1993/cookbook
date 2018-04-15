@@ -4,6 +4,18 @@ import onionPie1 from './images/onion-pie-1.jpg'
 import onionPie2 from './images/onion-pie-2.jpg'
 import onionPie3 from './images/onion-pie-3.jpg'
 
+let links = [
+  {
+    recipeNumber:"1",
+    recipeTitle:"Raised Donut Recipe with Glaze",
+    imageLink: breakfast
+  },
+  {
+    recipeNumber:"2",
+    recipeTitle:"Cheese and Onion Pie",
+    imageLink: onionPie1
+  }
+];
 
 let donutRecipe = {
   ingredients: [
@@ -180,4 +192,4 @@ Because there are so few ingredients in this pie, you really want to focus on us
   ]
 };
 
-export {donutRecipe,onionPieRecipe};
+export {donutRecipe,onionPieRecipe,links};
