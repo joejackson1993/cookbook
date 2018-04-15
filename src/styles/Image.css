@@ -1,4 +1,6 @@
 .Image-container {
+	flex-shrink: .4;
+	flex-basis: 40%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -6,6 +8,7 @@
 }
 
 .Image-block {
+	flex-basis: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -22,5 +25,6 @@
 }
 
 .Image {
-	flex-basis: 200px;
+	max-width: 100%;
+	height: auto;
 }

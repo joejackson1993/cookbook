@@ -17,7 +17,7 @@ class RecipeOverview extends Component {
 			<div className="Overview-box">
 				<h3 className="Recipe-title">{data.title}</h3>
         <p className="Rating-box">{"Rating: " + data.rating}</p>
-        <p className="Recipe-description">{data.description}</p>
+        <pre className="Recipe-description">{data.description}</pre>
    		</div>
   	);
 	}

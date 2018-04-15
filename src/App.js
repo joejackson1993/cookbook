@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import {images,overview,ingredients,directions} from "./tempData";
 
 import Main from './components/Main';
 import Header from './components/Header';
