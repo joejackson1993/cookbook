@@ -15,7 +15,7 @@ class ImageContainer extends Component {
 		const data = this.state.images;
 		console.log("logging data: " + data);
 		const imageBlocks = data.map((data) =>
-		<ImageBlock key={data.imageTitle} data={data} />
+		<ImageBlock key={data.imageLink} data={data} />
 	);
 
 	return (

@@ -1,22 +1,24 @@
 .Recipies-main {
-  box-sizing: border-box;
+  width: 100%;
+  display: flex;
 }
 
 .Recipie-list {
+  padding: 0;
   display: flex;
-  flex-flow: row wrap;
 }
 
-.Recipe-box {
-  width: 400px;
-  display: flex;
-  flex-flow: column nowrap;
-  flex-basis: 50%;
-}
 .Recipe-image {
   max-width: 100%;
   height: auto;
 }
 .Recipe-link {
-
+  margin-left: 1em;
+  border-style: solid;
+  max-width: 300px;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }

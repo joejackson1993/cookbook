@@ -173,15 +173,12 @@ Because there are so few ingredients in this pie, you really want to focus on us
   images: [
     {
       imageLink:onionPie1,
-      imageTitle:""
     },
     {
       imageLink:onionPie2,
-      imageTitle:""
     },
     {
       imageLink:onionPie3,
-      imageTitle:""
     }
   ],
   directions: [

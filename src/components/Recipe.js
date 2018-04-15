@@ -19,12 +19,12 @@ class Recipe extends Component {
 
   render() {
 
-    if (this.state.recipeNumber == 1){
+    if (this.state.recipeNumber === "1"){
       ingredients = donutRecipe.ingredients;
       overview = donutRecipe.overview;
       directions = donutRecipe.directions;
       images = donutRecipe.images;
-    } else if (this.state.recipeNumber == 2){
+    } else if (this.state.recipeNumber === "2"){
       ingredients = onionPieRecipe.ingredients;
       overview = onionPieRecipe.overview;
       directions = onionPieRecipe.directions;
