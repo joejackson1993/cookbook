@@ -1,11 +1,20 @@
 .Image-container {
 	display: flex;
 	flex-shrink: .4;
-	flex-basis: 40%;
+	flex-basis: 60%;
 
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+
+	overflow: auto;
+	height: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+}
+
+.Image-container::-webkit-scrollbar {
+    display: none;
 }
 
 .Image-block {

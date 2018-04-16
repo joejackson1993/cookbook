@@ -1,10 +1,9 @@
 /*  Color scheme.. for now... */
 /* https://www.sessions.edu/color-calculator-results/?colors=38e8ff,307882,3ab1c1
 https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=1&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.17478991596638654,0.33916148567180876,0.39999999999999997,0.9598053248890546,0.9891417636641472,1,0.39327731092436974,0.7631133427615697,0.9,0.25794117647058823,0.3251311222214427,0.35,0.30588235294117644,0.5935325999256653,0.7&swatchOrder=0,1,2,3,4*/
-
-/** {
+* {
   box-sizing: border-box;
-}   // need to see if this is a thing or not.. */
+}
 html {
   height: 100%;
   background-color: #F5FCFF;
@@ -41,24 +40,34 @@ li {
 }
 
 .Content-main {
+  overflow: hidden;
+  height: 100vh;
+  margin-top: -150px;
+  padding-top: 150px;
+  backface-visibility: hidden;
+  will-change: overflow;
+
   display: flex;
   justify-content: space-around;
   align-items: stretch;
 }
 
 .Content-center {
+  overflow: auto;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+
   display: flex;
   flex-direction: column;
 }
 
+.Content-center::-webkit-scrollbar {
+    display: none;
+}
 
 .App-footer {
   flex-basis: 100%;
-  /* position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  flex-shrink: 0;*/
   background-color: #2D5666;
   color: white;
   text-align: center;
