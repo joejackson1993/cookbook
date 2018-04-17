@@ -1,14 +1,18 @@
-import breakfast from "./images/breakfast.jpeg"
-import breakfast2 from "./images/breakfast2.jpeg"
+// import breakfast from "./images/breakfast.jpeg"
+// import breakfast2 from "./images/breakfast2.jpeg"
 import onionPie1 from './images/onion-pie-1.jpg'
 import onionPie2 from './images/onion-pie-2.jpg'
 import onionPie3 from './images/onion-pie-3.jpg'
+import donut1 from './images/donut-1.jpeg'
+import donut2 from './images/donut-2.jpeg'
+import donut3 from './images/donut-3.jpeg'
+import donut4 from './images/donut-4.jpeg'
 
 let links = [
   {
     recipeNumber:"1",
     recipeTitle:"Raised Donut Recipe with Glaze",
-    imageLink: breakfast
+    imageLink: donut1
   },
   {
     recipeNumber:"2",
@@ -68,12 +72,20 @@ let donutRecipe = {
   },
   images: [
     {
-      imageLink:breakfast,
-      imageTitle:"Breakfast"
+      imageLink:donut1,
+      imageTitle:""
     },
     {
-      imageLink:breakfast2,
-      imageTitle:"Breakfast 2"
+      imageLink:donut2,
+      imageTitle:""
+    },
+    {
+      imageLink:donut3,
+      imageTitle:""
+    },
+    {
+      imageLink:donut4,
+      imageTitle:""
     }
   ],
   directions: [
