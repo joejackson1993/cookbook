@@ -59,6 +59,7 @@ li {
   -ms-overflow-style: none;
 
   display: flex;
+  flex: 2 0;
   flex-direction: column;
 }
 

@@ -1,7 +1,6 @@
 .Image-container {
 	display: flex;
-	flex-shrink: .4;
-	flex-basis: 60%;
+	flex: 1.5;
 
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -27,6 +26,7 @@
 
 .ImageHeader {
 	padding-left: 10px;
+	margin: 0;
 }
 
 .imageDescription {

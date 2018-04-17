@@ -136,6 +136,49 @@ let onionPieRecipe = {
       "ammount": "5",
       "measurement": "tablespoons",
       "ingredient": "sour cream"
+    },
+    {
+      "ammount": "1/4",
+      "measurement": "cup",
+      "syntax": "of",
+      "ingredient": "unsalted butter",
+      "note": ", or half a stick"
+    },
+    {
+      "ammount": "6",
+      "measurement": "",
+      "ingredient": "Onions",
+      "note": ", thinly sliced"
+    },
+    {
+      "ammount": "1",
+      "measurement": "teaspoon",
+      "ingredient": "kosher salt"
+    },
+    {
+      "ammount": "1",
+      "measurement": "teaspoon",
+      "ingredient": "freshly ground black pepper"
+    },
+    {
+      "ammount": "3/4",
+      "measurement": "cup",
+      "ingredient": "water"
+    },
+    {
+      "ammount": "1 1/2",
+      "measurement": "pounds",
+      "ingredient": "grated Cheddar cheese"
+    },
+    {
+      "ammount": "2",
+      "measurement": "",
+      "ingredient": "eggs"
+    },
+    {
+      "ammount": "5",
+      "measurement": "tablespoons",
+      "ingredient": "sour cream"
     }
   ],
   overview: {
