@@ -3,4 +3,16 @@
   padding: 10px;
   margin:10px;
   word-wrap: wrap;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.Directions-list {
+  margin-top: 0;
+  padding-left: 30px;
+}
+
+.Directions-header {
+  margin-left: 20px;
 }

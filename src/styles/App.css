@@ -3,6 +3,7 @@
 https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=1&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.17478991596638654,0.33916148567180876,0.39999999999999997,0.9598053248890546,0.9891417636641472,1,0.39327731092436974,0.7631133427615697,0.9,0.25794117647058823,0.3251311222214427,0.35,0.30588235294117644,0.5935325999256653,0.7&swatchOrder=0,1,2,3,4*/
 * {
   box-sizing: border-box;
+  border-width: thin;
 }
 html {
   height: 100%;
@@ -16,7 +17,7 @@ div {
 h3 {
   font-family: 'Vollkorn', serif;
   font-size: 1.5em;
-  margin: .8em;
+  margin: .5em;
 }
 
 p, pre, li {
@@ -58,9 +59,9 @@ li {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 
-  display: flex;
+  /* display: flex; */
   flex: 2 0;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .Content-center::-webkit-scrollbar {
@@ -72,4 +73,33 @@ li {
   background-color: #2D5666;
   color: white;
   text-align: center;
+}
+
+
+
+
+.fadeout {
+bottom: 0; /* top is also an option */
+width:100%;
+height: 1em;
+background: -webkit-linear-gradient( /*for webkit based browsers */
+rgba(255, 255, 255, 0) 0%,
+rgba(255, 255, 255, 1) 100%
+);
+background-image: -moz-linear-gradient( /*for firefox*/
+rgba(255, 255, 255, 0) 0%,
+rgba(255, 255, 255, 1) 100%
+);
+background-image: -o-linear-gradient( /*opera browser*/
+rgba(255, 255, 255, 0) 0%,
+rgba(255, 255, 255, 1) 100%
+);
+background-image: linear-gradient(
+rgba(255, 255, 255, 0) 0%,
+rgba(255, 255, 255, 1) 100%
+);
+background-image: -ms-linear-gradient( /*microsoft ie*/
+rgba(255, 255, 255, 0) 0%,
+rgba(255, 255, 255, 1) 100%
+);
 }
