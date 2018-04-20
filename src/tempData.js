@@ -89,18 +89,54 @@ let donutRecipe = {
     }
   ],
   directions: [
-    {step:"In a bowl with a spoon, mix yeast and warm water, and set aside"},
-    {step:"In a large bowl, mix sugar, salt and shortening (I use a stand mixer)"},
-    {step:"Add milk and allow to cool to room temperature"},
-    {step:"Beat eggs in another bowl with a whisk, and add to cooled mixture"},
-    {step:"Add yeast and water mixture"},
-    {step:"Add flour a bit at a time until you have a ball of dough (I use the paddle attachment)"},
-    {step:"Set dough in an oiled mixing bowl and allow to rise until it has doubled in size"},
-    {step:"Flour a board or you counter and place the dough on it."},
-    {step:"Roll the dough to a 1/2 inch thickness and cut with a cookie cutter or mason jar lid"},
-    {step:"Cut the hole (my mom used a thimble)"},
-    {step:"Let donuts rise again, for 30 minutes"},
-    {step:"Heat one inch of oil and fry donuts until both sides are golden brown."}
+    {
+      step:"In a bowl with a spoon, mix yeast and warm water, and set aside",
+      ingredients: ["yeast", "water"]
+    },
+    {
+      step:"In a large bowl, mix sugar, salt and shortening (I use a stand mixer)",
+      ingredients: ['sugar', 'salt', 'shortening']
+    },
+    {
+      step:"Add milk and allow to cool to room temperature",
+      ingredients: ['milk']
+    },
+    {
+      step:"Beat eggs in another bowl with a whisk, and add to cooled mixture",
+      ingredients: ['eggs']
+    },
+    {
+      step:"Add yeast and water mixture",
+      ingredients: []
+    },
+    {
+      step:"Add flour a bit at a time until you have a ball of dough (I use the paddle attachment)",
+      ingredients: ["flour"]
+    },
+    {
+      step:"Set dough in an oiled mixing bowl and allow to rise until it has doubled in size",
+      ingredients: []
+    },
+    {
+      step:"Flour a board or you counter and place the dough on it.",
+      ingredients: []
+    },
+    {
+      step:"Roll the dough to a 1/2 inch thickness and cut with a cookie cutter or mason jar lid",
+      ingredients: []
+    },
+    {
+      step:"Cut the hole (my mom used a thimble)",
+      ingredients: []
+    },
+    {
+      step:"Let donuts rise again, for 30 minutes",
+      ingredients: []
+    },
+    {
+      step:"Heat one inch of oil and fry donuts until both sides are golden brown.",
+      ingredients: []
+    }
   ]
 };
 
