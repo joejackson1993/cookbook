@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import '../styles/App.css';
 import {donutRecipe,onionPieRecipe} from "../tempData"
 
@@ -32,15 +33,16 @@ class Recipe extends Component {
     }
 
     return (
-        <div className="Content-main">
-         <IngredientList data={ingredients} />
-         <div className="Content-center">
-         <RecipeOverview data={overview} />
-         <Directions data={directions} />
-         </div>
-         <ImageContainer images={images} />
-         <div className='fadeout'></div>
+      <div className="Content-main">
+        <IngredientList data={ingredients} />
+        <div className="linemarker">lm</div>
+        <div className="Content-center">
+          <RecipeOverview data={overview} />
+          <Directions data={directions} />
         </div>
+        <ImageContainer images={images} />
+        <div className='fadeout'></div>
+      </div>
     );
   }
 }
