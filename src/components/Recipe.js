@@ -39,6 +39,7 @@ class Recipe extends Component {
          <Directions data={directions} />
          </div>
          <ImageContainer images={images} />
+         <div className='fadeout'></div>
         </div>
     );
   }

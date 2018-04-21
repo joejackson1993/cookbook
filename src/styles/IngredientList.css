@@ -1,8 +1,5 @@
-.Ingredient-box {
+.Ingredient-container {
   flex: 1;
-  padding: 10px;
-  margin: 10px;
-  border-style: solid;
 
   overflow: auto;
   height: auto;
@@ -10,9 +7,14 @@
   -ms-overflow-style: none;
 }
 
-
-.Ingredient-box::-webkit-scrollbar {
+.Ingredient-container::-webkit-scrollbar {
     display: none;
+}
+
+.Ingredient-box {
+  padding: 10px;
+  margin: 10px;
+  border-style: solid;
 }
 
 .Ingredient-list {
