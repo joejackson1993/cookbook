@@ -70,3 +70,12 @@ li {
 .Content-center::-webkit-scrollbar {
     display: none;
 }
+
+.linecheck {
+  align-self: center;
+}
+
+.linemarker {
+  position: relative;
+  top: 30%;
+}
