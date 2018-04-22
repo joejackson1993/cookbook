@@ -1,14 +1,22 @@
 .Image-container {
-	flex-shrink: .4;
-	flex-basis: 40%;
 	display: flex;
-	flex-wrap: wrap;
+	flex: 1.5;
+
+	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+
+	overflow: auto;
+	height: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+}
+
+.Image-container::-webkit-scrollbar {
+    display: none;
 }
 
 .Image-block {
-	flex-basis: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -18,6 +26,7 @@
 
 .ImageHeader {
 	padding-left: 10px;
+	margin: 0;
 }
 
 .imageDescription {

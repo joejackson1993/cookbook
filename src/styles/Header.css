@@ -14,9 +14,13 @@
   justify-content: space-between;
   align-items: center;
   background-color: #2D5666;
-  height: 50px;
   padding: 15px;
   color: white;
+
+  position: relative;
+  z-index: 10;
+  height: 70px;
+
 }
 
 .Header-links{

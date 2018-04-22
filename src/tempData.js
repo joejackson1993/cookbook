@@ -1,9 +1,25 @@
-import breakfast from "./images/breakfast.jpeg"
-import breakfast2 from "./images/breakfast2.jpeg"
+// import breakfast from "./images/breakfast.jpeg"
+// import breakfast2 from "./images/breakfast2.jpeg"
 import onionPie1 from './images/onion-pie-1.jpg'
 import onionPie2 from './images/onion-pie-2.jpg'
 import onionPie3 from './images/onion-pie-3.jpg'
+import donut1 from './images/donut-1.jpeg'
+import donut2 from './images/donut-2.jpeg'
+import donut3 from './images/donut-3.jpeg'
+import donut4 from './images/donut-4.jpeg'
 
+let links = [
+  {
+    recipeNumber:"1",
+    recipeTitle:"Raised Donut Recipe with Glaze",
+    imageLink: donut1
+  },
+  {
+    recipeNumber:"2",
+    recipeTitle:"Cheese and Onion Pie",
+    imageLink: onionPie1
+  }
+];
 
 let donutRecipe = {
   ingredients: [
@@ -56,32 +72,119 @@ let donutRecipe = {
   },
   images: [
     {
-      imageLink:breakfast,
-      imageTitle:"Breakfast"
+      imageLink:donut1,
+      imageTitle:""
     },
     {
-      imageLink:breakfast2,
-      imageTitle:"Breakfast 2"
+      imageLink:donut2,
+      imageTitle:""
+    },
+    {
+      imageLink:donut3,
+      imageTitle:""
+    },
+    {
+      imageLink:donut4,
+      imageTitle:""
     }
   ],
   directions: [
-    {step:"In a bowl with a spoon, mix yeast and warm water, and set aside"},
-    {step:"In a large bowl, mix sugar, salt and shortening (I use a stand mixer)"},
-    {step:"Add milk and allow to cool to room temperature"},
-    {step:"Beat eggs in another bowl with a whisk, and add to cooled mixture"},
-    {step:"Add yeast and water mixture"},
-    {step:"Add flour a bit at a time until you have a ball of dough (I use the paddle attachment)"},
-    {step:"Set dough in an oiled mixing bowl and allow to rise until it has doubled in size"},
-    {step:"Flour a board or you counter and place the dough on it."},
-    {step:"Roll the dough to a 1/2 inch thickness and cut with a cookie cutter or mason jar lid"},
-    {step:"Cut the hole (my mom used a thimble)"},
-    {step:"Let donuts rise again, for 30 minutes"},
-    {step:"Heat one inch of oil and fry donuts until both sides are golden brown."}
+    {
+      step:"In a bowl with a spoon, mix yeast and warm water, and set aside",
+      ingredients: ["yeast", "water"]
+    },
+    {
+      step:"In a large bowl, mix sugar, salt and shortening (I use a stand mixer)",
+      ingredients: ['sugar', 'salt', 'shortening']
+    },
+    {
+      step:"Add milk and allow to cool to room temperature",
+      ingredients: ['milk']
+    },
+    {
+      step:"Beat eggs in another bowl with a whisk, and add to cooled mixture",
+      ingredients: ['eggs']
+    },
+    {
+      step:"Add yeast and water mixture",
+      ingredients: []
+    },
+    {
+      step:"Add flour a bit at a time until you have a ball of dough (I use the paddle attachment)",
+      ingredients: ["flour"]
+    },
+    {
+      step:"Set dough in an oiled mixing bowl and allow to rise until it has doubled in size",
+      ingredients: []
+    },
+    {
+      step:"Flour a board or you counter and place the dough on it.",
+      ingredients: []
+    },
+    {
+      step:"Roll the dough to a 1/2 inch thickness and cut with a cookie cutter or mason jar lid",
+      ingredients: []
+    },
+    {
+      step:"Cut the hole (my mom used a thimble)",
+      ingredients: []
+    },
+    {
+      step:"Let donuts rise again, for 30 minutes",
+      ingredients: []
+    },
+    {
+      step:"Heat one inch of oil and fry donuts until both sides are golden brown.",
+      ingredients: []
+    }
   ]
 };
 
 let onionPieRecipe = {
   ingredients: [
+    {
+      "ammount": "1/4",
+      "measurement": "cup",
+      "syntax": "of",
+      "ingredient": "unsalted butter",
+      "note": ", or half a stick"
+    },
+    {
+      "ammount": "6",
+      "measurement": "",
+      "ingredient": "Onions",
+      "note": ", thinly sliced"
+    },
+    {
+      "ammount": "1",
+      "measurement": "teaspoon",
+      "ingredient": "kosher salt"
+    },
+    {
+      "ammount": "1",
+      "measurement": "teaspoon",
+      "ingredient": "freshly ground black pepper"
+    },
+    {
+      "ammount": "3/4",
+      "measurement": "cup",
+      "ingredient": "water"
+    },
+    {
+      "ammount": "1 1/2",
+      "measurement": "pounds",
+      "ingredient": "grated Cheddar cheese"
+    },
+    {
+      "ammount": "2",
+      "measurement": "",
+      "ingredient": "eggs"
+    },
+    {
+      "ammount": "5",
+      "measurement": "tablespoons",
+      "ingredient": "sour cream"
+    },
     {
       "ammount": "1/4",
       "measurement": "cup",
@@ -161,15 +264,12 @@ Because there are so few ingredients in this pie, you really want to focus on us
   images: [
     {
       imageLink:onionPie1,
-      imageTitle:""
     },
     {
       imageLink:onionPie2,
-      imageTitle:""
     },
     {
       imageLink:onionPie3,
-      imageTitle:""
     }
   ],
   directions: [
@@ -180,4 +280,4 @@ Because there are so few ingredients in this pie, you really want to focus on us
   ]
 };
 
-export {donutRecipe,onionPieRecipe};
+export {donutRecipe,onionPieRecipe,links};

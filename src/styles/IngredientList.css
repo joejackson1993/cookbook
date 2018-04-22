@@ -1,6 +1,18 @@
+.Ingredient-container {
+  flex: 1;
+
+  overflow: auto;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.Ingredient-container::-webkit-scrollbar {
+    display: none;
+}
+
 .Ingredient-box {
-  flex: 0 0 20%;
-  padding : 10px;
+  padding: 10px;
   margin: 10px;
   border-style: solid;
 }
@@ -11,6 +23,5 @@
 }
 
 .Ingredient-header {
-  margin: 1em;
   text-align: center;
 }

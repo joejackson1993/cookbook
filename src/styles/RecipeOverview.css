@@ -1,9 +1,18 @@
 .Overview-box {
   border-style: solid;
-  padding: 10px;
+  padding: 10px 30px;
   margin:10px;
+
+  /* display: flex; */
+  flex-flow: column;
+  align-items: center;
+}
+
+.Recipe-title {
+  margin-left: 0;
 }
 
 .Recipe-description {
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
+  /* padding: 20px; */
 }

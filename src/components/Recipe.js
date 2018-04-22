@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import '../styles/App.css';
 import {donutRecipe,onionPieRecipe} from "../tempData"
 
@@ -19,12 +20,12 @@ class Recipe extends Component {
 
   render() {
 
-    if (this.state.recipeNumber == 1){
+    if (this.state.recipeNumber === "1"){
       ingredients = donutRecipe.ingredients;
       overview = donutRecipe.overview;
       directions = donutRecipe.directions;
       images = donutRecipe.images;
-    } else if (this.state.recipeNumber == 2){
+    } else if (this.state.recipeNumber === "2"){
       ingredients = onionPieRecipe.ingredients;
       overview = onionPieRecipe.overview;
       directions = onionPieRecipe.directions;
@@ -32,14 +33,16 @@ class Recipe extends Component {
     }
 
     return (
-        <div className="Content-main">
-         <IngredientList data={ingredients} />
-         <div className="Content-center">
-         <RecipeOverview data={overview} />
-         <Directions data={directions} />
-         </div>
-         <ImageContainer images={images} />
+      <div className="Content-main">
+        <IngredientList data={ingredients} />
+        <div className="linemarker">lm</div>
+        <div className="Content-center">
+          <RecipeOverview data={overview} />
+          <Directions data={directions} />
         </div>
+        <ImageContainer images={images} />
+        <div className='fadeout'></div>
+      </div>
     );
   }
 }
