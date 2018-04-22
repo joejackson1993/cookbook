@@ -4,14 +4,16 @@ https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=1
 
 /** {
   box-sizing: border-box;
+<<<<<<< Updated upstream
 }   // need to see if this is a thing or not.. */
+=======
+  border-width: thin;
+  border-radius: 3px;
+}
+>>>>>>> Stashed changes
 html {
   height: 100%;
   background-color: #F5FCFF;
-}
-
-div {
-  /* border-color: white; */
 }
 
 h3 {
