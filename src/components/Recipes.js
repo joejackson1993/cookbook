@@ -11,7 +11,7 @@ class Recipes extends Component {
     const listItems = links.map((link) =>
         <Link key={link.recipeNumber} className="Recipe-link" to={`/cookbook/${link.recipeNumber}`}>
           {link.recipeTitle}
-          <img className="Recipe-image" src={link.imageLink}></img>
+          <img className="Recipe-image" src={link.imageLink} alt={link.recipeTitle}></img>
         </Link>
     );
 
