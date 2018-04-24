@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import '../styles/NewRecipe.css';
+
+import NewRecipeIngredients from './NewRecipeIngredients';
 
 import {TINYMCE_API_KEY} from '../constants';
 
@@ -35,17 +38,22 @@ class NewRecipe extends Component {
   render() {
     return (
       <div className="New-recipe-container">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Title:
-            <input value={this.state.title} onChange={this.handleTitleChange} />
-          </label>
-          <label>
-            Overview:
-            <Editor apiKey={TINYMCE_API_KEY} value={this.state.content} onEditorChange={this.handleEditorChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+        <NewRecipeIngredients />
+
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Title:
+              <input value={this.state.title} onChange={this.handleTitleChange} />
+            </label>
+            <label>
+              Overview:
+              <Editor apiKey={TINYMCE_API_KEY} value={this.state.content} onEditorChange={this.handleEditorChange} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+
       </div>
     )
   }
