@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Recipes.css'
 
+import NewLink from '../images/new-recipe-link.png';
 import {links} from '../tempData';
 
 
@@ -17,7 +18,14 @@ class Recipes extends Component {
 
     return (
         <div className="Recipies-main">
-          <ul className="Recipie-list">{listItems}</ul>
+          <ul className="Recipie-list">
+            <Link key={"new"} className="Recipe-link" to={`/new`}>
+              {"New Recipe"}
+              <img className="Recipe-image" src={NewLink} alt={"New Recipe"}></img>
+            </Link>
+            {listItems}
+          </ul>
+
         </div>
     );
   }

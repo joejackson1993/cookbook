@@ -3,6 +3,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import '../styles/NewRecipe.css';
 
 import NewRecipeIngredients from './NewRecipeIngredients';
+import NewRecipeImage from './NewRecipeImage';
 
 import {TINYMCE_API_KEY} from '../constants';
 
@@ -54,6 +55,7 @@ class NewRecipe extends Component {
           </form>
         </div>
 
+        <NewRecipeImage/>
       </div>
     )
   }
