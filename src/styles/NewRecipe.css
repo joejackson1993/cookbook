@@ -1,5 +1,11 @@
 .New-recipe-container{
+
+  height: auto;
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
+}
+
+.New-recipe-center {
+    flex: 2 0;
 }

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import NewIngredientItems from './NewIngredientItems';
 
+import '../styles/NewRecipeIngredients.css';
+
 //TODO need to do it more like this.
 //https://codepen.io/philmayfield/pen/MwRgyN
 
@@ -32,11 +34,6 @@ class NewRecipeIngredients extends Component {
       console.log("adding ingredient " + this.state.newIngredient);
       let newIngredientsArray = this.state.ingredients.concat({ingredient: this.state.newIngredient, key:this.state.key });
 
-      //dont think that I need this.. idk
-      // this.setState(prevState => ({
-      //     ingredients: [...prevState.ingredients, newIngredientsArray],
-      // }));
-
       this.setState({ingredients: newIngredientsArray});
       this.setState({newIngredient: ''});
       this.setState({key: (this.state.key + 1)})
@@ -49,7 +46,7 @@ class NewRecipeIngredients extends Component {
 
   render () {
     return (
-      <div>
+      <div className='New-recipe-ingredients-container'>
         <form onSubmit={this.addIngredient}>
           <label>
             Ingredients:

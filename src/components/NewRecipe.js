@@ -12,13 +12,16 @@ class NewRecipe extends Component {
     super(props);
 
     this.state = {
-      content: '',
-      title: ''
+      overview: '',
+      title: '',
+      ingredients: '',
+      directions: '',
      };
 
-    this.handleEditorChange = this.handleEditorChange.bind(this);
+    this.handleOverviewEditorChange = this.handleOverviewEditorChange.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDirectionEditorChange = this.handleDirectionEditorChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -27,8 +30,12 @@ class NewRecipe extends Component {
     console.log("state", this.state);
   }
 
-  handleEditorChange(content) {
-    this.setState({ content });
+  handleOverviewEditorChange(overview){
+    this.setState({overview});
+  }
+
+  handleDirectionEditorChange(directions){
+    this.setState({directions});
   }
 
   handleTitleChange(event) {
@@ -39,9 +46,10 @@ class NewRecipe extends Component {
   render() {
     return (
       <div className="New-recipe-container">
+
         <NewRecipeIngredients />
 
-        <div>
+        <div className="New-recipe-center">
           <form onSubmit={this.handleSubmit}>
             <label>
               Title:
@@ -49,8 +57,44 @@ class NewRecipe extends Component {
             </label>
             <label>
               Overview:
-              <Editor apiKey={TINYMCE_API_KEY} value={this.state.content} onEditorChange={this.handleEditorChange} />
+              <Editor
+                init={{
+                  menu: {
+                    edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
+                    insert: {title: 'Insert', items: 'link media'},
+                    format: {title: 'Format', items: 'bold italic underline | removeformat'},
+                  },
+                }
+                }
+                name="description"
+                initialValue="<p>hello editor</p>"
+                apiKey={TINYMCE_API_KEY}
+                value={this.state.overview}
+                onEditorChange={this.handleOverviewEditorChange}
+                />
             </label>
+
+            <label>
+              Directions:
+              <Editor
+                plugins='lists'
+                init={{
+                  menu: {
+                    edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
+                    insert: {title: 'Insert', items: 'link media'},
+                    format: {title: 'Format', items: 'bold italic underline superscript | removeformat'},
+                  },
+                }
+                }
+                name="directions"
+                initialValue="<p>hello Directions editor</p>"
+                apiKey={TINYMCE_API_KEY}
+                value={this.state.directions}
+                onEditorChange={this.handleDirectionEditorChange}
+                />
+            </label>
+
+
             <input type="submit" value="Submit" />
           </form>
         </div>
