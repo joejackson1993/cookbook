@@ -30,12 +30,12 @@ let donutRecipe = {
       "ingredient": "active dry yeast"
     },
     {
-      "ammount": "1/2",
+      "ammount": '0.5',
       "measurement": "cup",
       "ingredient": "white sugar"
     },
     {
-      "ammount": "1/2",
+      "ammount": "0.5",
       "measurement": "cup",
       "ingredient": "shortening"
     },

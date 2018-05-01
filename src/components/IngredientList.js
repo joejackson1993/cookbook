@@ -1,5 +1,12 @@
 import React, {Component} from "react";
+import math from 'mathjs';
+
 import "../styles/IngredientList.css";
+
+math.config({
+	number: 'Fraction'   // Default type of number:
+	// 'number' (default), 'BigNumber', or 'Fraction'
+});
 
 class IngredientList extends Component {
 	constructor(props) {
@@ -9,12 +16,19 @@ class IngredientList extends Component {
 		};
 	}
 
+	oneHalf(data){
+		data.map((data) => math.divide(math.fraction(data.ammount), 2));
+	}
+
 	render (){
 
 		const data = this.state.data;
 		const listItems = data.map((data) =>
 		<li key={data.ingredient.toString()}>
-			{data.ammount + " " + data.measurement + " " + data.ingredient}
+			{(data.ammount.match('\\.')) ?
+				(math.format(math.fraction(data.ammount)) + " " + data.measurement + " " + data.ingredient) :
+				(data.ammount + " " + data.measurement + " " + data.ingredient)
+			} {/* If the ammount contains a decimal (.) then we format it to a fraction. */}
 		</li>
 	);
 	return (
