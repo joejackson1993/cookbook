@@ -16,19 +16,41 @@ class IngredientList extends Component {
 		};
 	}
 
-	oneHalf(data){
-		data.map((data) => math.divide(math.fraction(data.ammount), 2));
+	//TODO need to pull out these two helper methods and possibly edit the data at a higher point.. idk
+
+	refactorAmmounts(data, number){
+		return data.map((data) => {data.ammount = math.multiply(data.ammount, number).toString(); return data} );
+	}
+
+	formatAmmount(data){
+		for (var i=0; i < data.length; i++){
+			console.log(i);
+			let formattedAmmount = '';
+			let splitDecimal = data[i].ammount.split('.');
+
+			if(splitDecimal[1]){
+				let fractionPortion = math.format(math.fraction(  ("." + splitDecimal[1])  ))
+
+				if (splitDecimal[0] !== '0'){
+					formattedAmmount = splitDecimal[0].concat(" ", fractionPortion);
+				}	else {
+					formattedAmmount = fractionPortion;
+				}
+				data[i].ammount = formattedAmmount;
+			}
+		}
 	}
 
 	render (){
 
 		const data = this.state.data;
-		const listItems = data.map((data) =>
+		let newData = this.refactorAmmounts(data, 1)
+		this.formatAmmount(newData);
+
+		console.log(newData);
+		const listItems = newData.map((data) =>
 		<li key={data.ingredient.toString()}>
-			{(data.ammount.match('\\.')) ?
-				(math.format(math.fraction(data.ammount)) + " " + data.measurement + " " + data.ingredient) :
-				(data.ammount + " " + data.measurement + " " + data.ingredient)
-			} {/* If the ammount contains a decimal (.) then we format it to a fraction. */}
+				{data.ammount + " " + data.measurement + " " + data.ingredient}
 		</li>
 	);
 	return (

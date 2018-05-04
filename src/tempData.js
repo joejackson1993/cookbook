@@ -35,7 +35,7 @@ let donutRecipe = {
       "ingredient": "white sugar"
     },
     {
-      "ammount": "0.5",
+      "ammount": "3.5",
       "measurement": "cup",
       "ingredient": "shortening"
     },
@@ -143,7 +143,7 @@ let donutRecipe = {
 let onionPieRecipe = {
   ingredients: [
     {
-      "ammount": "1/4",
+      "ammount": ".25",
       "measurement": "cup",
       "syntax": "of",
       "ingredient": "unsalted butter",
@@ -166,12 +166,12 @@ let onionPieRecipe = {
       "ingredient": "freshly ground black pepper"
     },
     {
-      "ammount": "3/4",
+      "ammount": ".75",
       "measurement": "cup",
       "ingredient": "water"
     },
     {
-      "ammount": "1 1/2",
+      "ammount": "1.5",
       "measurement": "pounds",
       "ingredient": "grated Cheddar cheese"
     },
@@ -186,7 +186,7 @@ let onionPieRecipe = {
       "ingredient": "sour cream"
     },
     {
-      "ammount": "1/4",
+      "ammount": ".25",
       "measurement": "cup",
       "syntax": "of",
       "ingredient": "unsalted butter",
@@ -209,12 +209,12 @@ let onionPieRecipe = {
       "ingredient": "freshly ground black pepper"
     },
     {
-      "ammount": "3/4",
+      "ammount": ".75",
       "measurement": "cup",
       "ingredient": "water"
     },
     {
-      "ammount": "1 1/2",
+      "ammount": "1.5",
       "measurement": "pounds",
       "ingredient": "grated Cheddar cheese"
     },
