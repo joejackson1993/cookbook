@@ -11,57 +11,80 @@ math.config({
 class IngredientList extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			data: props.data,
+			ingredientFraction: 1,
 		};
+
+		this.handleChange = this.handleChange.bind(this);
 	}
 
-	//TODO need to pull out these two helper methods and possibly edit the data at a higher point.. idk
-
-	refactorAmmounts(data, number){
-		return data.map((data) => {data.ammount = math.multiply(data.ammount, number).toString(); return data} );
-	}
-
-	formatAmmount(data){
-		for (var i=0; i < data.length; i++){
-			console.log(i);
-			let formattedAmmount = '';
-			let splitDecimal = data[i].ammount.split('.');
-
-			if(splitDecimal[1]){
-				let fractionPortion = math.format(math.fraction(  ("." + splitDecimal[1])  ))
-
-				if (splitDecimal[0] !== '0'){
-					formattedAmmount = splitDecimal[0].concat(" ", fractionPortion);
-				}	else {
-					formattedAmmount = fractionPortion;
-				}
-				data[i].ammount = formattedAmmount;
-			}
-		}
-	}
+	handleChange(event) {
+    this.setState({ingredientFraction: event.target.value});
+  }
 
 	render (){
 
-		const data = this.state.data;
-		let newData = this.refactorAmmounts(data, 1)
-		this.formatAmmount(newData);
+		let factoredData = this.refactorAmmounts(this.state.data, this.state.ingredientFraction);
+		let formattedData = this.formatAmmount(factoredData);
 
-		console.log(newData);
-		const listItems = newData.map((data) =>
+		const listItems = formattedData.map((data) =>
 		<li key={data.ingredient.toString()}>
-				{data.ammount + " " + data.measurement + " " + data.ingredient}
+			{data.ammount + " " + data.measurement + " " + data.ingredient}
 		</li>
 	);
 	return (
 		<div className="Ingredient-container">
 			<div className="Ingredient-box">
 				<h3 className="Ingredient-header">{"Ingredients"}</h3>
+					<select className="Ammount-Selector" value={this.state.ingredientFraction} onChange={this.handleChange}>
+						<option value={.5}>1/2</option>
+						<option value={1}>1</option>
+						<option value={2}>2</option>
+						<option value={4}>4</option>
+					</select>
 				<ul className="Ingredient-list">{listItems}</ul>
 			</div>
 		</div>
 	);
 }
+
+
+//TODO need to pull out these two helper methods and possibly edit the data at a higher point.. idk
+
+refactorAmmounts(data, number){
+
+	let factoredData = JSON.parse(JSON.stringify(data));
+	return factoredData.map(function(data){
+
+		data.ammount = math.multiply(data.ammount, number).toString();
+		return data;
+	});
+}
+
+formatAmmount(data){
+
+	let formattedData = JSON.parse(JSON.stringify(data));
+
+	for (var i=0; i < formattedData.length; i++){
+		let formattedAmmount = '';
+		let splitDecimal = formattedData[i].ammount.split('.');
+
+		if(splitDecimal[1]){
+			let fractionPortion = math.format(math.fraction(  ("." + splitDecimal[1])  ))
+
+			if (splitDecimal[0] !== '0'){
+				formattedAmmount = splitDecimal[0].concat(" ", fractionPortion);
+			}	else {
+				formattedAmmount = fractionPortion;
+			}
+			formattedData[i].ammount = formattedAmmount;
+		}
+	}
+	return formattedData;
+}
+
 }
 
 export default IngredientList;
